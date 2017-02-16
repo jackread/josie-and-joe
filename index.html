@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Josie and Joe Hijazi | Wedding Information | Wedding Website</title>
+    <meta name="description" content="Best. Wedding. Ever.">
+    <link rel="stylesheet" href="assets/main.css">
+    <link rel="canonical" href="http://localhost:4000/">
+    <link rel="alternate" type="application/rss+xml" title="Updates" href="/feed.xml">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <script src="https://use.fontawesome.com/56f3e57854.js"></script>
+  </head>
+
+  <body>
+    <header class="site-header" role="banner">
+
+      <div class="wrapper">
+        <a class="site-title" href="/"><span class='logo'>Josie <span>- and -</span> Joe</span><span class="date">4th November 2017</span></a>
+        <a class="button primary" href="#RSVP">Online RSVP</a>
+      </div>
+    </header>
+
+    <main class="site-content" aria-label="Content">
+      <div class="white-section">
+        <div class="wrapper">
+          <h1>A day to remember</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas congue orci tellus, eget bibendum quam elementum sit amet. Proin blandit aliquet dui, at rhoncus orci auctor eu. Nam ut massa ultricies, scelerisque nisl a, posuere lorem.</p>
+          <p class="last">Maecenas cursus magna lobortis, mattis mi vitae, facilisis lacus. Nullam nec ipsum mauris. Sed et odio quis sem iaculis facilisis. Ut tempor, elit eget venenatis. Nam ut massa ultricies, scelerisque nisl a, posuere lorem.</p>
+        </div>
+      </div>
+      <div class="map-section">
+    
+        <div id="map"></div>
+
+        <div class="bottom-left">
+          <h2>Get Directions</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas congue orci tellus, eget bibendum quam elementum sit amet. Proin blandit aliquet dui, at rhoncus orci auctor eu. Nam ut massa ultricies, scelerisque nisl a, posuere lorem.</p>
+          <a onclick="buttonClick(event, 'church')" class="button small secondary" href="#MAPS">Church</a>
+          <a onclick="buttonClick(event, 'reception')" class="button small" href="#MAPS">Reception</a>
+        </div>
+      </div>
+      <div class="white-section">
+        <div class="wrapper">
+          <h1>Somewhere to stay</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas congue orci tellus, eget bibendum quam elementum sit amet. Proin blandit aliquet dui, at rhoncus orci auctor eu. Nam ut massa ultricies, scelerisque nisl a, posuere lorem.</p>
+
+          <ul class="accomodation">
+            <li>
+              <p><i class="fa fa-hotel"></i> <span>The Sandbanks Hotel, Poole, <strong>£120/night</strong></span></p>
+              <a class="button small secondary right" href="#HOTEL">Book</a>
+            </li>
+            <li>
+              <p><i class="fa fa-hotel"></i> <span>The Sandbanks Hotel, Poole, <strong>£120/night</strong></span></p>
+              <a class="button small secondary right" href="#HOTEL">Book</a>
+            </li>
+            <li>
+              <p><i class="fa fa-hotel"></i> <span>The Sandbanks Hotel, Poole, <strong>£120/night</strong></span></p>
+              <a class="button small secondary right" href="#HOTEL">Book</a>
+            </li>
+            <li>
+              <p><i class="fa fa-hotel"></i> <span>The Sandbanks Hotel, Poole, <strong>£120/night</strong></span></p>
+              <a class="button small secondary right" href="#HOTEL">Book</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="social-section">
+        <div class="social-image"></div>
+        <div class="bottom-right">
+          <h2>#JOSIEANDJOE</h2>
+          <p class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas congue orci tellus, eget bibendum quam elementum sit amet. Proin blandit aliquet dui, at rhoncus orci auctor eu. Nam ut massa ultricies, scelerisque nisl a, posuere lorem.</p>
+        </div>
+      </div>
+      <div class="white-section">
+        <div class="wrapper">
+          <h1>Gift Information</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas congue orci tellus, eget bibendum quam elementum sit 
+          amet. Proin blandit aliquet dui, at rhoncus orci auctor eu. Nam ut massa ultricies, scelerisque nisl a, posuere lorem.</p>
+          <p>Maecenas cursus magna lobortis, mattis mi vitae, facilisis lacus. Nullam nec ipsum mauris. Sed et odio quis sem iaculis facilisis. Ut tempor, elit eget venenatis. Nam ut massa ultricies, scelerisque nisl a, posuere lorem.</p>
+          <a class="button secondary center" href="#REGISTERY">GIFT REGISTRY</a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrapper">
+        <a class="site-title" href="/"><span class='logo'>Josie <span>- and -</span> Joe</span><span class="date">4th November 2017</span></a>
+        <a class="button primary" href="#RSVP">Online RSVP</a>
+        <!--<p class="rss-subscribe">Subscribe <a href="/feed.xml">to RSS updates</a></p>-->
+      </div>
+    </footer>
+
+    <!-- Scripts: Google maps and jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script>
+      var map,
+          currentMap,
+          currentItems = [],
+          mapConfigs = {
+            "church" : {
+              "map": {
+                "center": { "lat": 50.7374564, "lng": -2.0594977 },
+                "zoom": 14
+              },
+              "markers": [
+                {
+                  "name" : "Lytchett Minster Church",
+                  "address" : "Lytchett Minster, Poole, BH16 5JE",
+                  "link" : "https://www.google.co.uk/maps/place/Lytchett+Minster+Parish+Church/@50.7374296,-2.0595835,17z/data=!3m1!4b1!4m12!1m6!3m5!1s0x4873a8a932f0a0b7:0x6386e4257856618c!2sLytchett+Minster+Parish+Church!8m2!3d50.7374262!4d-2.0573948!3m4!1s0x4873a8a932f0a0b7:0x6386e4257856618c!8m2!3d50.7374262!4d-2.0573948",
+                  "latlng": { "lat": 50.7374564, "lng": -2.0594977 }
+                }
+              ]
+            },
+            "reception" : {
+              "map": {
+                "center": { "lat": 50.707307, "lng": -1.925789 },
+                "zoom": 14
+              },
+              "markers": [
+                {
+                  "name" : "The Italian Villa",
+                  "address" : "164 Canford Cliffs Rd, Poole, BH13 7ES",
+                  "link" : "https://www.google.co.uk/maps/place/The+Italian+Villa/@50.7073304,-1.9279559,17z/data=!3m1!4b1!4m5!3m4!1s0x4873a11e64eb23c5:0x14e17eb279f048!8m2!3d50.707327!4d-1.9257672",
+                  "latlng": { "lat": 50.707307, "lng": -1.925789 }
+                }
+              ]
+            }
+          };
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'));
+        map.setOptions({ draggable: true, zoomControl: true, scrollwheel: false, disableDoubleClickZoom: false});
+
+        showMap('church');
+      }
+
+      function buttonClick(event, id) {
+        $('.button.small').toggleClass('secondary')
+        showMap(id); 
+        event.preventDefault();
+      }
+
+      function toggleMap() {
+        //map = new google.maps.Map(document.getElementById('map'), mapConfigs[currentMap]);
+        id = currentMap=='church' ? 'reception' : 'church';
+        showMap(currentMap);
+      }
+
+      function showMap(id) {
+        // save this for reasons
+        currentMap = id;
+
+        // update the map
+        map.setZoom(mapConfigs[id].map.zoom);
+        map.setCenter(new google.maps.LatLng(mapConfigs[id].map.center.lat, mapConfigs[id].map.center.lng));
+        map.panBy(0, 50)
+
+        // load info
+        loadMarkers(id);
+      }
+
+      function loadMarkers(id) {
+        var markers = mapConfigs[id].markers;
+
+        // hide any existing markers
+        for (var x in currentItems) {
+          currentItems[x].setMap(null);
+        }
+
+        // add ones for this map
+        for (var x in markers) {
+          var marker = new google.maps.Marker({
+              map: map,
+              animation: google.maps.Animation.DROP,
+              position: {lat: markers[x].latlng.lat, lng: markers[x].latlng.lng}
+          });
+
+          var content = "<h4>"+ markers[x].name +"</h4>";
+          content += "<span>"+ markers[x].address +"</span>";
+          content += "<br /><a class='link' href='"+ markers[x].link +"' target='_blank'>Open Map</a>";
+
+          var infowindow = new google.maps.InfoWindow({
+              content: content,
+              backgroundColor: 'rgb(255,255,255)',
+          });
+
+          
+          // slight delay, allows pin animation to complete
+          setTimeout(function() {
+              infowindow.open(map, marker);
+          }, 1000);
+
+          currentItems.push(marker);
+        }
+      }
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbdQ1kJ7aHraYOnFchpBr4fh2mFz4JPVA&callback=initMap"
+    async defer></script>
+
+
+  </body>
+
+</html>
