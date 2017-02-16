@@ -329,16 +329,13 @@ a.link {
 
 .social-image {
   height: 310px;
-  background: url('hashtag-bg.png') no-repeat center center;
   background-size: cover;
-  -webkit-filter: blur(11px);
-  filter: blur(11px);
 }
 
 .bottom-right {
   height: 230px;
   padding: 40px 20px;
-  background: rgba(154,167,157,0.6);
+  background: #9AA79D;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -350,13 +347,11 @@ a.link {
   }
   .social-image {
     height: 680px;
-    -webkit-filter: none;
-    filter: none;
+    background: url('hashtag-bg.png') no-repeat center center;
   }
   .bottom-right {
     width: 620px;
     height: auto;
-    background: #9AA79D;
     padding: 60px 80px 60px 80px;
   }
 }
