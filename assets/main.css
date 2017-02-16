@@ -206,7 +206,12 @@ a.link {
   letter-spacing: 1px;
 }
 
-.button:hover,
+@media (min-width: 768px) {
+  .button:hover {
+    opacity: 0.6;
+  }
+}
+
 .button:active {
   opacity: 0.6;
 }
